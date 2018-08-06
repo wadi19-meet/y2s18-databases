@@ -14,10 +14,23 @@ class Knowledge(Base):
 	# topic of the article. The last column will be
 	# an integer, representing your rating of the article.
 
-__tablename__ = 'walla'
-student_id = column(integer, primary_key=true)
-name = column(string)
-topic = column(string)
-rating = column(integer)
+	__tablename__ = 'knowledge'
+	table_id = Column(Integer, primary_key=True)
+	name = Column(String)
+	topic = Column(String)
+	rating = Column(Integer)
+	def __repr__(self):
+		return ("names : {}\n"
+		"topics : {}\n"
+		"id : {}\n"
+		"rate :{}").format(
+			self.name,
+			self.topic,
+			self.table_id,
+			self.rating)
+		
+Knowledge1 = Knowledge(name="wadi")
+print(Knowledge1)
 
-	
+
+		
