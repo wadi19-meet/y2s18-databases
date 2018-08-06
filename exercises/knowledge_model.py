@@ -14,4 +14,10 @@ class Knowledge(Base):
 	# topic of the article. The last column will be
 	# an integer, representing your rating of the article.
 
-	pass
+__tablename__ = 'walla'
+student_id = column(integer, primary_key=true)
+name = column(string)
+topic = column(string)
+rating = column(integer)
+
+	
