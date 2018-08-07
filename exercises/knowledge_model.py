@@ -29,8 +29,9 @@ class Knowledge(Base):
 			self.table_id,
 			self.rating)
 		
-Knowledge1 = Knowledge(name="wadi")
-print(Knowledge1)
+# knowledge1 = Knowledge(name="wadi")
+# print(knowledge1)
+
 
 
 		
