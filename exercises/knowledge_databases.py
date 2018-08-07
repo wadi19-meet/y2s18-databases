@@ -35,11 +35,22 @@ print (query_article_by_topic("wiwi"))
 
 
 
-def delete_article_by_topic():
-	pass
-
+def delete_article_by_topic(topic):
+	knowledge = session.query(
+		Knowledge).filter_by(topic = topic).delete()
+	session.commit()
+	
+print(delete_article_by_topic("wiwi"))
+print (query_all_articles())
 def delete_all_articles():
-	pass
+	session.query(Knowledge).delete()
+	session.commit()
+	
 
-def edit_article_rating():
-	pass
+
+def edit_article_rating(rating, name):
+	subject1 = session.query(Knowledge).filter_by(topic=name).first()
+	subject1.rating = rating
+	session.commit()
+		
+	
